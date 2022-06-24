@@ -1,3 +1,6 @@
+# https://eto1ocdsb.github.io/
+# https://ics4u---portfolio---eric-to.glitch.me/
+
 # 2. How will you continue learning about computer science?
 
 Like many skills, the skills gained in computer science need to be applied to be properly learnt. The application of computer science-learnt concepts in other courses will future develop the necessary skills to be successful in computer science. It will also prepare a person to apply those concepts in a more effective manner when returning to a computer science environment. Application of concepts is not restricted to just applying concepts, creating projects, or having computer science as a hobby would also future learning of computer science. Of course a person can also continue to learn computer science through courses, and class.
