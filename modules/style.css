@@ -66,59 +66,58 @@ div a:hover {
 }
 
 p a:hover {
-  color:#64646C;
+  color: #64646c;
   text-decoration: underline;
 }
-/* put header image files and tags here. you can adjust them with background-position and put background-color if they are transparent images. */ 
+/* put header image files and tags here. you can adjust them with background-position and put background-color if they are transparent images. */
 /* ideally, host stuff on imgur. just drag and drop them there from google*/
-#javascript
- {
+#javascript {
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/625a2d3c-3637-4839-ba98-69abd1293386.image.png?v=1655525835379");
-   color:white;
+  color: white;
 }
 
 #html {
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/2ffb671d-8e78-439c-8179-6936dc9ab348.image.png?v=1655573125498");
-  background-position:0% 43.5%;
-  color:black;
+  background-position: 0% 43.5%;
+  color: black;
 }
 
-#p5{
+#p5 {
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/ff95ff2c-dbc5-40fc-80a1-e78f3dc90d50.image.png?v=1655573432020");
-  color:black;
+  color: black;
 }
 
-#naturalSim{
+#naturalSim {
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/85fa346e-bd71-45fb-9a4a-f65b46e83ac5.image.png?v=1655573843394");
-  color:#1bb2e0;
+  color: #1bb2e0;
 }
 
-#compsci{
-  color:white;
+#compsci {
+  color: white;
 }
 
-#git{
+#git {
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/f61b0c57-69e6-4378-9a1d-aaf39fad09b6.image.png?v=1655574179916");
-  color:red;
+  color: red;
 }
 
-#hack{
+#hack {
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/bb25fe22-acfd-446f-9c77-2ef8a6a1179e.image.png?v=1655574375786");
-  color:black;
+  color: black;
 }
-#microbit{
-  background-image:url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/e8671c4d-af2b-4578-8c67-25137179e4bc.image.png?v=1655574669958");
-  background-position:0% 50.5%;
+#microbit {
+  background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/e8671c4d-af2b-4578-8c67-25137179e4bc.image.png?v=1655574669958");
+  background-position: 0% 50.5%;
 }
-#snake{
-  background-image:url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/2e0569b4-fdd4-4f8c-87c9-6269dac9fa41.image.png?v=1655574808564");
-    background-position:0% 50.5%;
-  color:red;
+#snake {
+  background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/2e0569b4-fdd4-4f8c-87c9-6269dac9fa41.image.png?v=1655574808564");
+  background-position: 0% 50.5%;
+  color: red;
 }
 
-#phaser{
-  background-image:url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/c0a506b2-f5e3-4957-bd1d-1f78d2ecdff6.image.png?v=1655574896891");
-  color:black;
+#phaser {
+  background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/c0a506b2-f5e3-4957-bd1d-1f78d2ecdff6.image.png?v=1655574896891");
+  color: black;
 }
 
 .header {
@@ -144,18 +143,18 @@ a .header:hover {
   padding: 10px;
   margin: 0 auto;
   max-width: 600px;
+  text-align:center;
 
   color: #333333;
   margin-top: 6em;
   margin-bottom: 0em;
-  text-align:center;
   border-bottom: 1px solid #333333;
   font-weight: 300;
   font-size: 1.75em;
   word-spacing: 2px;
 }
 
-.grid-container {
+.grid-container {  
   display: grid;
   /*grid-template: "a a a""b b b b b"; */
   grid-template: 100px / auto auto;
@@ -188,11 +187,11 @@ a .header:hover {
 #title {
   /*will replace*/
   background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/1c2f4933-82ed-490b-acfc-afd24172f57a.image.png?v=1655446134538");
-  background-position: left top;
+  background-position: left 30%;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
-  color: #00008B;
+  color: black;
   padding: 55px;
   font-size: 50px;
   font-weight: 300;
@@ -201,12 +200,11 @@ a .header:hover {
   background-color: #1f1f1f;
 }
 
-
 footer {
   margin-top: 4em;
   padding: 1em;
   background-color: #333333;
-  color:#ffffff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -216,29 +214,28 @@ footer {
   display: flex;
   justify-content: center;
   /*align-items: center;*/
-  
 }
 /*for shortcuts to next page*/
-.scRight{
-  text-align:right;
-  margin:;
+.scRight {
+  text-align: right;
+  margin: ;
 }
-.scLeft{
-  left:0px;
-  
-  margin:10px;
+.scLeft {
+  left: 0px;
+
+  margin: 10px;
 }
 
-.back{
+.back {
   /*text-align: center;*/
   padding-left: 32%;
-  padding-right:38%;
+  padding-right: 38%;
 }
 
-.links{
-  text-align:center;
+.links {
+  text-align: center;
 }
-.javaheader{
+.javaheader {
   color: #c2198c;
   background-repeat: no-repeat;
   background-position: center;
@@ -250,4 +247,8 @@ footer {
   letter-spacing: 1px;
   text-align: center;
   background-color: #1f1f1f;
+}
+#white {
+  background-image: url("https://cdn.glitch.global/90ca359f-fce7-435c-8732-149320d22fd2/32ecc302-d4db-433e-90a9-d9d0b2cefe4f.image.png?v=1655828705898");
+  
 }
