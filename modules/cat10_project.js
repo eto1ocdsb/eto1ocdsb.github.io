@@ -1,3 +1,6 @@
+
+
+//setting variables
 let game;
 let platforms; // a group of platform objects the player will jump on
 let player; // the actual player controlled sprite
@@ -16,6 +19,7 @@ class JumpScene extends Phaser.Scene {
     super({ key: "JumpScene" });
   }
 
+  //preloading images spritesheets used for aesthetics of the game
   preload() {
     this.load.image(
       "platform",
@@ -29,42 +33,46 @@ class JumpScene extends Phaser.Scene {
       "codey",
       "https://content.codecademy.com/courses/learn-phaser/Codey%20Jump/codey.png",
       {
+        //setting codeys spritesheet to a proper scale
         frameWidth: 72,
         frameHeight: 90,
       }
     );
   }
 
+  
   create() {
-    // gradient
+    // gradient for background
     const graphics = this.add.graphics();
 
     graphics.fillGradientStyle(0xdadaff, 0x6cfafa, 0xfccaff, 0xdadaff, 1);
     graphics.fillRect(0, 0, gameOptions.width, gameOptions.height);
 
+    //adding particles for when codey goes FAST
     particles = this.add.particles("stripe");
 
+    //setting gravity to false and platforms to moveable, allowing platforms to drop when codey hits them
     this.physics.world.setBounds(0, 0, 480, 640);
     platforms = this.physics.add.group({
       allowGravity: false,
       immovable: false,
     });
-
+  
+    //creating platforms
     for (let i = 0; i < 8; i++) {
       let randomX = Math.floor(Math.random() * 400) + 24;
       platforms.create(randomX, i * 80, "platform").setScale(0.5);
     }
-
+  
+    //adding codey's basic "rules" and bounce, as well as setting world bounds
     player = this.physics.add.sprite(100, 450, "codey").setScale(0.5);
-
-   player.setBounce(1)
+    player.setBounce(1);
     player.setCollideWorldBounds(true);
     player.body.checkCollision.up = false;
     player.body.checkCollision.left = false;
     player.body.checkCollision.right = false;
-
-
-
+  
+    //player jump
     this.anims.create({
       key: "jump",
       frames: this.anims.generateFrameNumbers("codey", {
@@ -92,7 +100,7 @@ class JumpScene extends Phaser.Scene {
       //if we don't include this then the player will always be going right or left instead of a L/R neutral upwards direction
       player.setVelocityX(0);
     }
-
+    //creating a shake for special efects
     if (player.body.touching.down) {
       this.cameras.main.shake(100, 0.004);
       player.setVelocityY(-500);
@@ -100,9 +108,10 @@ class JumpScene extends Phaser.Scene {
 
     // We want to the platforms to move downwards and create an effect of progressing upwards
     // This can be done by moving the camera but can also be done by moving the world around the player
-    if (player.body.y < gameOptions.height / 1) {
+    if (player.body.y < gameOptions.height / 1.5) {
       platforms.children.iterate(updateY, this);
     };
+    //how particles are created
     if (platformCount > 10 && !emitter) {
       emitter = particles.createEmitter({
        x: { min:0, max: gameOptions.width}, 
@@ -116,7 +125,7 @@ class JumpScene extends Phaser.Scene {
     };
   }
 }
-
+//basics of background and game, as well as setting arcade physics
 let config = {
   type: Phaser.AUTO,
   width: gameOptions.width,
